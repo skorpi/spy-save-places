@@ -44,6 +44,26 @@ pip install -r requirements.txt
 
 This will also install numpy and scipy for your convenience. However, you are not required to use these packages to complete the exercise.
 
+#### Using Docker
+
+If you have docker installed on your system you don't need to install python.
+
+Instead you can start the bash inside a python docker container (you need to be in the same folder like this README file): 
+
+```
+docker run -it --rm --name spy-safe-spaces -v "$PWD":/usr/src/myapp -w /usr/src/myapp python:3 bash
+```
+
+Install the dependencies inside this container:
+
+```
+pip install -r requirements.txt
+```
+
+And run the tests as described below.
+
+Remember that - due to the `--rm` flag the container will be removed once you are done. So you'll have to install the
+requirements again.
 
 ### Creating the solution
 
